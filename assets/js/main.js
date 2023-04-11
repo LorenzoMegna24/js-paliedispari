@@ -45,3 +45,31 @@ if (nome == nomeRuotato){
 // Sommiamo i due numeri
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
+
+let utente = prompt ('pari o dispari?')
+console.log(utente);
+let numeroUtente = parseInt ( prompt ('scegli un numero da 1 a 5'))
+console.log(numeroUtente);
+
+function numeroRandom(min, max){
+  return Math.floor( Math.random() * max ) + min;
+}
+
+let numeroPc = numeroRandom( 1, 5)
+console.log(numeroPc);
+let somma = numeroUtente + numeroPc
+console.log(somma);
+
+function pariDispari(x) {
+  if(x % 2 == 0 ){
+    return 'pari'
+  }else {
+    return 'dispari'
+  }
+}
+
+if(pariDispari(somma) == utente){
+  console.log('hai vinto');
+}else{
+  console.log('pc vice');
+}
